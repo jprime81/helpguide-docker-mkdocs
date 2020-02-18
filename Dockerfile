@@ -16,11 +16,3 @@ RUN \
     pip3 install --upgrade pip && \
     pip install mkdocs==${MKDOCS_VERSION} && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
-
-COPY container-files /
-
-RUN chmod +x /bootstrap.sh
-
-WORKDIR /workdir
-
-ENTRYPOINT ["/bootstrap.sh"]
