@@ -11,8 +11,9 @@ RUN \
         bash \
         git \
         openssh \
-        python3 \
-        python3-dev && \
-    pip3 install --upgrade pip && \
+        python2 \
+        python2-dev \
+        py-setuptools; \
+    easy_install-2.7 pip && \
     pip install mkdocs==${MKDOCS_VERSION} && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
